@@ -47,14 +47,14 @@ jobs:
       # Action: https://github.com/marketplace/actions/github-app-token
     - name: Fetch a token from GitHub App
       id: generate_token
-      uses: tibdex/github-app-token@v2
+      uses: tibdex/github-app-token@3beb63f4bd073e61482598c45c71c1019b59b73a # v2
       with:
         app_id: ${{ secrets.APP_ID }}
         private_key: ${{ secrets.PRIVATE_KEY }}
 
       # Action repo: https://github.com/sgibson91/bump-jhub-image-action
     - name: 'Bump image tags: ${{ matrix.name }}'
-      uses: sgibson91/bump-jhub-image-action@main
+      uses: sgibson91/bump-jhub-image-action@e3327db064478c85192f793c8da84ed1b19dc806 # main
       with:
         config_path: ${{ matrix.config_path }}
         images_info: ${{ matrix.images_info }}
