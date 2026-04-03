@@ -39,14 +39,14 @@ jobs:
       # Action: https://github.com/marketplace/actions/github-app-token
     - name: Fetch a token from GitHub App
       id: generate_token
-      uses: tibdex/github-app-token@v2
+      uses: tibdex/github-app-token@3beb63f4bd073e61482598c45c71c1019b59b73a # v2
       with:
         app_id: ${{ secrets.APP_ID }}
         private_key: ${{ secrets.PRIVATE_KEY }}
 
       # Action repo: https://github.com/sgibson91/bump-helm-deps-action
     - name: 'Bump helm chart versions: ${{ matrix.name }}'
-      uses: sgibson91/bump-helm-deps-action@main
+      uses: sgibson91/bump-helm-deps-action@2b113b02a37e511aa51ab8a329b6736086ccc0bb # main
       with:
         chart_path: ${{ matrix.chart_path }}
         chart_urls: ${{ matrix.chart_urls }}

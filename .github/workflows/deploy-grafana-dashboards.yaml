@@ -56,9 +56,9 @@ jobs:
         - cluster_name: heliophysics
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
 
-    - uses: actions/setup-python@v5
+    - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
       with:
         python-version: '3.13'
 
@@ -73,10 +73,10 @@ jobs:
             | tar -xvz --one-top-level=$HOME/.local/bin
 
     - name: Install sops
-      uses: mdgreenwald/mozilla-sops-action@v1.6.0
+      uses: mdgreenwald/mozilla-sops-action@d9714e521cbaecdae64a89d2fdd576dd2aa97056 # v1.6.0
 
     - name: Setup sops credentials to decrypt repo secrets
-      uses: google-github-actions/auth@v2
+      uses: google-github-actions/auth@c200f3691d83b41bf9bbd8638997a462592937ed # v2
       with:
         credentials_json: ${{ secrets.GCP_KMS_DECRYPTOR_KEY }}
 

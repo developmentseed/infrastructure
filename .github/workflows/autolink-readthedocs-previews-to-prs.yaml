@@ -11,7 +11,7 @@ jobs:
     permissions:
       pull-requests: write
     steps:
-    - uses: readthedocs/actions/preview@v1
+    - uses: readthedocs/actions/preview@b8bba1484329bda1a3abe986df7ebc80a8950333 # v1
       with:
           # The project slug in RTD still has the old repo name
         project-slug: 2i2c-pilot-hubs
